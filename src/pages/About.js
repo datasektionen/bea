@@ -11,12 +11,12 @@ function About() {
             <p>Vill du gå med? Fyll i formuläret här: <a href="/#">länk</a></p></div>
             <div className="roles">
                     <Profile role="Konglig Lokalchef (Data)" name="Carl Liljencrantz" email="lokalchef"/>
-                    <Profile role="Sektionslokalsansvarig (Media)" name="Vanessa Baatarsukh" email="sektionslokal" media={true}/>
+                    <Profile role="Sektionslokalsansvarig (Media)" name="Förnamn Efternamn" email="sektionslokal" media={true}/>
                     <Profile role="Städskrii (Data)" name="Förnamn Efternamn" email=""/>
                     <Profile role="Städskrii (Media)" name="Förnamn Efternamn" email=""/>
                     <Profile role="Läskkylsansvarig" name="Förnamn Efternamn" email=""/>
 
-                    <Profile role="dLol" name="Karl-Isac Åström" email="dlol"/>
+                    <Profile role="dLol" name="Förnamn Efternamn" email="dlol"/>
                 
                     <Profile role="Maestro" name="Förnamn Efternamn" email=""/>
                 

@@ -7,7 +7,7 @@ function Home () {
         <Info title="Välkommen till METAdorernas sida!"/>
         <div className="info-box">
             <h3>Leveransadress</h3>
-            <p>Osquars Backe 21 (RÄTTA MIG OM JAG HAR FEL)</p>
+            <p>Osquars Backe 21</p>
         </div>
         </div>
     )
