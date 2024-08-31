@@ -1,0 +1,13 @@
+.pageTitle {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.infoBox {
+    text-align: center;
+}
+
+.info-box > * {
+    padding: 0 110px;
+    list-style: none;
+}
