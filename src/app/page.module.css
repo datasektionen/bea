@@ -1,0 +1,8 @@
+.infoBox {
+    text-align: center;
+}
+
+.infoBox > * {
+    padding: 0 110px;
+    list-style: none;
+}

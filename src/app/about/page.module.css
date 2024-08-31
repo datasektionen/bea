@@ -1,0 +1,15 @@
+.roles {
+    display: flex;
+    list-style: none;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 30px;
+    justify-content: space-around;
+}
+
+.roles > * {
+    min-width: 250px;
+    height: 200px;
+    margin: 40px;
+    text-align: center;
+}

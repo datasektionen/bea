@@ -1,0 +1,30 @@
+.container {
+    padding: 16px 0;
+    display: inline-block;
+    align-content: start;
+    text-align: center;
+    width: 100vw;
+}
+
+.link {
+    color: #fff;
+    text-align: center;
+    padding: 10px 16px;
+    margin-left: 2px;
+    border-radius: 10px;
+    margin-right: 2px;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+
+    &:hover {
+        background-color: yellow;
+        color: black;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 19px;
+        display: inline;
+    }
+}
