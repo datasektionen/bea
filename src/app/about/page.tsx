@@ -18,7 +18,7 @@ export default function About() {
             </Info>
             <div className={styles.roles}>
                 {sortedRoles.map((role) => {
-                    if (internFunkisar[role]) {
+                    if (internFunkisar[role].length) {
                         return internFunkisar[role].map((person) => (
                             <Profile
                                 key={`${role}-${person.name}`}

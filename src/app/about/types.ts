@@ -8,13 +8,15 @@ export const sortedRoles = [
     'konglig-lokalchef-data',
     'sektionslokalsansvarig-media',
     'stadskrii',
+    'flippermicke',
+    'arkadmicke',
     'laskkylsansvarig',
     'dlol',
     'maestro',
     'mario',
     'mister',
     'misty',
-    'moba',
+    'mog',
     'moms',
     'money',
     'mopp',
@@ -40,9 +42,17 @@ export const rolesInfo: RolesInfo = {
         slug: 'stadskrii',
         name: 'Städskrii',
     },
+    flippermicke: {
+        slug: 'flippermicke',
+        name: 'Flippermicke',
+    },
+    arkadmicke: {
+        slug: 'arkadmicke',
+        name: 'Arkadmicke',
+    },
     laskkylsansvarig: {
         slug: 'laskkylsansvarig',
-        name: 'Läskkylsansvarig',
+        name: 'Hederlige Stures efterträdare (Läskkylsansvarig)',
     },
     dlol: {
         slug: 'dlol',
@@ -64,9 +74,9 @@ export const rolesInfo: RolesInfo = {
         slug: 'misty',
         name: 'Misty',
     },
-    moba: {
-        slug: 'moba',
-        name: 'Moba',
+    mog: {
+        slug: 'mog',
+        name: 'Mog',
     },
     moms: {
         slug: 'moms',

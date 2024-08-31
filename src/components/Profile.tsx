@@ -25,6 +25,7 @@ export default function Profile(props: ProfileProps) {
             <p>{props.name}</p>
             {props.email && (
                 <p>
+                    {/* TODO: Maybe make this mailto but more scrapers might find it then... */}
                     {props.email}
                     {getEmailExtension(props.emailType!)}
                 </p>
