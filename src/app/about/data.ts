@@ -1,6 +1,6 @@
-import { Person, Roles } from './types';
+import { Person, Role } from './types';
 
-export const internFunkisar: Record<Roles, Person[]> = {
+export const internFunkisar: Record<Role, Person[]> = {
     'konglig-lokalchef-data': [
         {
             name: 'Carl Blomqvist',
@@ -28,7 +28,7 @@ export const internFunkisar: Record<Roles, Person[]> = {
     dlol: [
         {
             name: 'Karl-Isac Åström',
-            email: 'dlol',
+            email: 'd-lol',
             emailType: 'data',
         },
     ],

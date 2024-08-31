@@ -1,6 +1,7 @@
 :root {
     --background: #212121;
-    --foreground: #ededed;
+    --orange-background: orange;
+    --text-on-background: #ededed;
     --primary-text: #000;
 }
 
@@ -15,7 +16,7 @@ html {
 }
 
 body {
-    color: var(--foreground);
+    color: var(--text-on-background);
     background: var(--background);
 }
 
@@ -61,5 +62,5 @@ h6 {
     margin: 30px auto;
     border-radius: 10px;
     padding: 40px;
-    background-color: orange;
+    background-color: var(--orange-background);
 }
