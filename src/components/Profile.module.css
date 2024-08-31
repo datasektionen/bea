@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container > p {
+    max-width: 500px;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+.personList {
+    margin-top: 6px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* If the grid has only one item, make it span both columns */
+.personList:only-child {
+    grid-column: span 2;
+}
+
+/* If the last row has a single item (odd number of items), center it */
+.personList > .personItem:nth-last-child(1):nth-child(odd) {
+    grid-column: span 2;
+}
+
+.personItem > p {
+    line-height: 1em;
+}
