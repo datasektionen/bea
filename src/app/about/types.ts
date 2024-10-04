@@ -64,7 +64,7 @@ export const rolesInfo: RolesInfo = {
     },
     dlol: {
         slug: 'dlol',
-        name: 'd-Lol',
+        name: 'd-LoL',
         description:
             'd-Lol (Ljud- Och Ljusansvarig) har till uppgift att underhålla sektionens ljud- och ljusutrustning.',
     },
