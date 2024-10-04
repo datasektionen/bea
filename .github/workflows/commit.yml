@@ -1,0 +1,30 @@
+name: Push commit
+
+on:
+    push:
+
+jobs:
+    lint:
+        name: Lint
+        runs-on: build-runner
+        steps:
+            - name: Git checkout
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22.5
+                  cache: 'npm'
+
+            - name: Installing dependencies
+              run: npm ci
+
+            - name: Typecheck
+              if: always()
+              run: npm run typecheck
+
+            - name: Lint
+              if: always()
+              run: npm run lint
