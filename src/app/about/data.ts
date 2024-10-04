@@ -30,7 +30,7 @@ export const internFunkisar: Record<Role, Person[]> = {
             emailType: 'data',
         },
     ],
-    dlol: [
+    d-LoL: [
         {
             name: 'Karl-Isac Åström',
             email: 'd-lol',
@@ -68,7 +68,18 @@ export const internFunkisar: Record<Role, Person[]> = {
             emailType: 'data',
         },
     ],
-    misty: [],
+    misty: [
+        {
+            name: 'Karl-Isac Åström',
+            email: 'kiastrom',
+            emailType: 'data',
+        },
+        {
+            name: 'Kristin Rosen',
+            email: 'kristinr@kth.se',
+            emailType: 'custom',
+        },
+    ],
     mog: [
         {
             name: 'Olof Bargholtz Melcherson',
