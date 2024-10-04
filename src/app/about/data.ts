@@ -30,7 +30,7 @@ export const internFunkisar: Record<Role, Person[]> = {
             emailType: 'data',
         },
     ],
-    d-LoL: [
+    dlol: [
         {
             name: 'Karl-Isac Åström',
             email: 'd-lol',
