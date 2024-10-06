@@ -1,5 +1,5 @@
 .container {
-    padding: 16px 0;
+    padding-bottom: 16px;
     display: inline-block;
     align-content: start;
     text-align: center;
@@ -9,7 +9,7 @@
 .link {
     color: #fff;
     text-align: center;
-    padding: 10px 16px;
+    padding: 4px 16px;
     margin-left: 2px;
     border-radius: 10px;
     margin-right: 2px;
@@ -26,5 +26,6 @@
     @media (min-width: 768px) {
         font-size: 19px;
         display: inline;
+        padding: 8px 16px;
     }
 }
