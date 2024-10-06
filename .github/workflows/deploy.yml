@@ -6,8 +6,22 @@ on:
   workflow_dispatch:
 
 jobs:
+  wait:
+    name: Wait for tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for tests
+        uses: lewagon/wait-on-check-action@v1.3.4
+        with:
+          ref: ${{ github.ref }}
+          check-name: Lint
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
+
   deploy:
     runs-on: ubuntu-latest
+    needs:
+      - wait
 
     steps:
     - name: Git checkout
