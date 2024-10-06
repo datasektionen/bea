@@ -14,8 +14,12 @@
 .personList {
     margin-top: 6px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 12px;
+
+    @media (min-width: 1350px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* If the grid has only one item, make it span both columns */
@@ -25,7 +29,11 @@
 
 /* If the last row has a single item (odd number of items), center it */
 .personList > .personItem:nth-last-child(1):nth-child(odd) {
-    grid-column: span 2;
+    grid-column: span 1;
+
+    @media (min-width: 1350px) {
+        grid-column: span 2;
+    }
 }
 
 .personItem > p {

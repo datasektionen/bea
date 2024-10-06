@@ -26,8 +26,8 @@ export default function RootLayout({
             className={lato.className}>
             <body>
                 <header>
-                    <NavBar />
                     <Header />
+                    <NavBar />
                 </header>
                 <div className="layout-content">{children}</div>
             </body>
