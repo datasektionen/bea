@@ -5,22 +5,22 @@ import styles from './NavBar.module.css';
 export default function NavBar() {
     return (
         <nav className={styles.container}>
-            <Link
+            {/* <Link
                 className={styles.link}
                 href="/">
                 Hem
-            </Link>
+            </Link> */}
             <Link
                 className={styles.link}
                 href="/about">
-                Om METAdorerna
+                Hem{/* Om METAdorerna */}
             </Link>
             <Link
                 className={styles.link}
                 href="/meta">
                 META
             </Link>
-            <Link
+            {/* <Link
                 className={styles.link}
                 href="/stadrutiner">
                 Städrutiner
@@ -29,7 +29,7 @@ export default function NavBar() {
                 className={styles.link}
                 href="/schedule">
                 Städschema
-            </Link>
+            </Link> */}
         </nav>
     );
 }
