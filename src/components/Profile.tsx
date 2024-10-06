@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Profile.module.css';
-import { Role, rolesInfo } from '@/app/about/types';
+import { Role, rolesInfo } from '@/app/(main)/about/types';
 
 interface ProfileProps {
     role: Role;
