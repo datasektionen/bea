@@ -4,7 +4,7 @@ import { Role, rolesInfo } from '@/app/about/types';
 
 interface ProfileProps {
     role: Role;
-    people: {
+    peoples: {
         name: string;
         email?: string;
         emailType?: 'data' | 'media' | 'custom';
