@@ -22,6 +22,11 @@ export default function NavBar() {
             </Link>
             {/* <Link
                 className={styles.link}
+                href="/clicker">
+                METAdor clicker
+            </Link> */}
+            {/* <Link
+                className={styles.link}
                 href="/stadrutiner">
                 Städrutiner
             </Link>
