@@ -1,8 +1,13 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import styles from './Header.module.css';
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
+    const router = useRouter();
+
     return (
         <div className={styles.container}>
             <Image
@@ -12,6 +17,7 @@ export default function Header() {
                 width={255.8}
                 height={250}
                 priority
+                onClick={() => router.push('/clicker')}
             />
         </div>
     );
