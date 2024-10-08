@@ -44,6 +44,7 @@ export function Cookie() {
         }, 1000);
 
         if (extraCookies.length < getExtraCookies(clicksInRow)) {
+            // TODO: Make better random were it takes screen size into account here
             setExtraCookies((prev) => [
                 ...prev,
                 {
