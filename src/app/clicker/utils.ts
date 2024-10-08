@@ -3,7 +3,9 @@
 import crypto from 'crypto';
 
 // 64 bytes
-const KEY: any = Buffer.from('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', 'hex');
+const KEY: any =
+    process.env.STORAGE_ENCRYPTION_KEY ||
+    Buffer.from('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', 'hex');
 const ALGORITHM = 'aes-256-cbc';
 
 /**

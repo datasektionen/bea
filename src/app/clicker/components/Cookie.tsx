@@ -23,6 +23,7 @@ export function Cookie() {
         if (clicksInRowTimeout.current) {
             clearTimeout(clicksInRowTimeout.current);
         }
+
         setClicksInRow((cur) => ++cur);
         if (clicksInRowToSpeed[clicksInRow]) {
             setCookieSpeed(clicksInRowToSpeed[clicksInRow]);
@@ -38,7 +39,7 @@ export function Cookie() {
         if (!CookieInstance.current) {
             return;
         }
-        await CookieInstance.current.click();
+        CookieInstance.current.click();
         setClicks(CookieInstance.current.getClicks());
         updateClicksInRow();
     }, [updateClicksInRow]);
@@ -48,7 +49,9 @@ export function Cookie() {
             CookieInstance.current = new CookieClass();
         }
         initClicks();
+    }, []);
 
+    useEffect(() => {
         function handleSpacebar(event: KeyboardEvent) {
             if (event.key === ' ') {
                 click();

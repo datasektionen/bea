@@ -1,3 +1,4 @@
+import { debounce } from '../utils/functions';
 import { decrypt, encrypt } from './utils';
 
 export function getClicksFromLS() {
@@ -10,6 +11,7 @@ export function setClicksInLS(clicks: string) {
 
 export class CookieClass {
     private clicks: number = 0;
+    private debounceSaveClicks = debounce(async () => await this.saveClicksToLS(), 100);
 
     constructor() {
         this.updateClicks();
@@ -24,16 +26,22 @@ export class CookieClass {
         if (!encryptedClicks) {
             return 0;
         }
-        return parseInt(await decrypt(encryptedClicks));
+        try {
+            const decryptedClicks = await decrypt(encryptedClicks);
+            return parseInt(decryptedClicks);
+        } catch (e) {
+            console.error(e);
+            return 0;
+        }
     }
 
     public async saveClicksToLS() {
         setClicksInLS(await encrypt(this.clicks.toString()));
     }
 
-    public async click() {
+    public click() {
         this.clicks++;
-        await this.saveClicksToLS();
+        this.debounceSaveClicks();
     }
 
     public getClicks(): number {
