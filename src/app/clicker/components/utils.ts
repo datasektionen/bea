@@ -1,4 +1,4 @@
-const cookieSpeedMap: Record<number, number> = {
+export const cookieSpeedMap: Record<number, number> = {
     1: 22,
     2: 18,
     3: 14,
@@ -14,6 +14,14 @@ export function getCookieSpeed(cookieSpeed: number): number {
     return cookieSpeedMap[cookieSpeed] || Object.values(cookieSpeedMap)[Object.values(cookieSpeedMap).length - 1];
 }
 
+export function getCookieLevel(cookieSpeed: number): number {
+    if (Object.keys(cookieSpeedMap).includes(cookieSpeed.toString())) {
+        return cookieSpeed;
+    } else {
+        return Object.values(cookieSpeedMap)[Object.values(cookieSpeedMap).length - 1];
+    }
+}
+
 export const clicksInRowToSpeed: Record<number, number> = {
     0: 1,
     10: 2,
@@ -25,3 +33,7 @@ export const clicksInRowToSpeed: Record<number, number> = {
     300: 8,
     350: 9,
 };
+
+export function getExtraCookies(clicksInRow: number): number {
+    return Math.floor(clicksInRow / 10);
+}
