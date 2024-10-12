@@ -73,12 +73,10 @@ export default function Laskkyl() {
                     />
                 </button>
                 <div className={styles.header}>
-                    <Image
+                    <Gif
                         src="/laskkyl.gif"
-                        alt="Läskylen"
                         width={800}
                         height={400}
-                        priority
                     />
                 </div>
                 <div className={styles.productsDiv}>
@@ -88,7 +86,11 @@ export default function Laskkyl() {
                                 key={type}
                                 className={styles.typesDiv}>
                                 {LaskkylTypetoGif[type] ? (
-                                    <Gif src={LaskkylTypetoGif[type]} />
+                                    <Gif
+                                        src={LaskkylTypetoGif[type]}
+                                        width={350}
+                                        height={175}
+                                    />
                                 ) : (
                                     <h1>{LaskkylTypetoString[type]}</h1>
                                 )}
