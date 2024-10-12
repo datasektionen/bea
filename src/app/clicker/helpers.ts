@@ -1,5 +1,5 @@
 import { debounce } from '../utils/functions';
-import { decrypt, encrypt } from './utils';
+import { decrypt, encrypt } from './server';
 
 export function getClicksFromLS() {
     return localStorage.getItem('clicks');
