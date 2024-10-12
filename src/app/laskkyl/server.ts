@@ -31,6 +31,10 @@ const laskkylData: LaskkylData = {
                 name: 'Pingvinstång',
                 price: 5,
             },
+            {
+                name: 'Fippel',
+                price: 1337,
+            },
         ],
         other: [],
     },
