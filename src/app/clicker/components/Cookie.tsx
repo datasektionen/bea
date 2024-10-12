@@ -2,7 +2,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './Cookie.module.css';
-import { clicksInRowToSpeed, cookieSpeedMap, getCookieLevel, getExtraCookies } from './utils';
+import { clicksInRowToSpeed, cookieSpeedMap, getCookieLevel, getExtraCookies, getRandomNumber } from './utils';
 import { CookieClass } from '../helpers';
 
 interface ExtraCookie {
@@ -44,12 +44,11 @@ export function Cookie() {
         }, 1000);
 
         if (extraCookies.length < getExtraCookies(clicksInRow)) {
-            // TODO: Make better random were it takes screen size into account here
             setExtraCookies((prev) => [
                 ...prev,
                 {
-                    x: Math.random() * 100,
-                    y: Math.random() * 100,
+                    x: getRandomNumber(0, window.innerWidth - cookieRef.current!.width),
+                    y: getRandomNumber(0, window.innerHeight - cookieRef.current!.height),
                     speed: Math.floor(Math.random() * 9) + 1,
                 },
             ]);
@@ -124,15 +123,15 @@ export function Cookie() {
                 <h2>Streak: {clicksInRow}</h2>
             </div>
             <div className={styles.manyCookieDiv}>
-                {/* Place 10 random cookies */}
+                {/* Place random cookies */}
                 {extraCookies.map(({ x, y, speed }, i) => (
                     <Image
                         key={i}
                         id={`cookie-${getCookieLevel(speed)}`}
                         className={styles.manyCookie}
                         style={{
-                            top: `max(calc(${y}vh - ${cookieRef.current?.height || 0}px), 0px)`, // `${Math.random() * 90}vh`,
-                            left: `max(calc(${x}vw - ${cookieRef.current?.height || 0}px), 0px)`, //`${Math.random() * 90}vw`,
+                            top: `${y}px`,
+                            left: `${x}px`,
                         }}
                         src={'/metadorerna_transparent.png'}
                         alt="Logo"

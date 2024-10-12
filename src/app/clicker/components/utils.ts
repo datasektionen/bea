@@ -37,3 +37,8 @@ export const clicksInRowToSpeed: Record<number, number> = {
 export function getExtraCookies(clicksInRow: number): number {
     return Math.floor(clicksInRow / 10);
 }
+
+/** min and max included */
+export function getRandomNumber(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
