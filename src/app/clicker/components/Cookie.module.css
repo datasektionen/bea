@@ -1,0 +1,32 @@
+.cookie {
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.clicksContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: var(--orange-background);
+    border-radius: 10px;
+}
+
+.clicksContainer > h2 {
+    text-align: center;
+}
+
+.manyCookieDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.manyCookie {
+    position: absolute;
+}

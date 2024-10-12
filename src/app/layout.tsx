@@ -29,7 +29,7 @@ export default function RootLayout({
                     <Header />
                     <NavBar />
                 </header>
-                <div className="layout-content">{children}</div>
+                {children}
             </body>
         </html>
     );
