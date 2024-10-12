@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
-import fullscreenLogo from '@/../public/fullscreen-logo.svg';
 import { getLaskkylData } from './server';
 import { LaskkylData, LaskkylTypes, LaskkylTypetoGif, LaskkylTypetoString } from './types';
 import { Gif } from './Gif';
@@ -65,7 +64,7 @@ export default function Laskkyl() {
                     className={styles.fullscreenButton}
                     onClick={toggleFullscreen}>
                     <Image
-                        src={fullscreenLogo}
+                        src="/fullscreen-logo.svg"
                         alt="Fullscreen"
                         width={40}
                         height={40}
