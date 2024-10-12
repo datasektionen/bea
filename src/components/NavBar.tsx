@@ -20,6 +20,11 @@ export default function NavBar() {
                 href="/meta">
                 META
             </Link>
+            <Link
+                className={styles.link}
+                href="/laskkyl">
+                Läskkyl
+            </Link>
             {/* <Link
                 className={styles.link}
                 href="/clicker">

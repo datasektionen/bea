@@ -10,6 +10,11 @@ const nextConfig = {
                 destination: '/about',
                 permanent: false,
             },
+            {
+                source: '/reload',
+                destination: '/laskkyl',
+                permanent: true,
+            },
         ];
     },
 };
