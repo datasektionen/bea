@@ -37,11 +37,11 @@ export default function Laskkyl() {
         const dataInterval = setInterval(fetchLaskkylData, 1000 * 60);
 
         // Reload page every 10 minutes
-        const reloadInterval = setInterval(() => router.replace('/reload'), 1000 * 60 * 10);
+        // const reloadInterval = setInterval(() => router.replace('/reload'), 1000 * 60 * 10);
 
         return () => {
             clearInterval(dataInterval);
-            clearInterval(reloadInterval);
+            // clearInterval(reloadInterval);
         };
     }, [router]);
 
