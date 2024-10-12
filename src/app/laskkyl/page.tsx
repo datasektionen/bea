@@ -113,6 +113,10 @@ export default function Laskkyl() {
                         Annars dödar swishavgifterna oss :,(
                         <br />
                         ...och METAdorerna dig!
+                        <br />
+                        <br />
+                        Om du har önskemål eller frågor kontakta oss på{' '}
+                        <a href="mailto:laskkyl@metadorerna.se">laskkyl@metadorerna.se</a>
                     </p>
                 </div>
             </div>
