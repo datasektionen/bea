@@ -25,9 +25,7 @@ jobs:
 
     steps:
     - name: Git checkout
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+      uses: actions/checkout@v4
 
     # See the following link for documentation:
     # https://github.com/marketplace/actions/dokku
