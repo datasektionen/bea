@@ -8,7 +8,13 @@ export const internFunkisar: Record<Role, Person[]> = {
             emailType: 'data',
         },
     ],
-    'sektionslokalsansvarig-media': [],
+    'sektionslokalsansvarig-media': [
+        {
+            name: 'Andreas Wingqvist',
+            email: 'sektionslokal',
+            emailType: 'media',
+        },
+    ],
     stadskrii: [
         {
             name: 'Hannes Hultin',
@@ -126,8 +132,8 @@ export const internFunkisar: Record<Role, Person[]> = {
             emailType: 'data',
         },
         {
-            name: 'Lukas Malmberg',
-            email: 'lukmal',
+            name: 'Lucas Dahlgren',
+            email: 'elbda',
             emailType: 'data',
         },
         {
