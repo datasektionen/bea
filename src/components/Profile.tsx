@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './Profile.module.css';
 import { Role, rolesInfo } from '@/app/(main)/about/types';
+import { Agg } from './ProfileAgg';
 
 interface ProfileProps {
-    role: Role;
+    role: Role | 'ägg';
     people: {
         name: string;
         email?: string;
@@ -23,6 +24,7 @@ function getEmailExtension(emailType: string) {
 }
 
 export default function Profile(props: ProfileProps) {
+    if (props.role === 'ägg') return <Agg />;
     const { name: roleName, description } = rolesInfo[props.role];
 
     return (

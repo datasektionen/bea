@@ -49,6 +49,11 @@ export default function About() {
                         />
                     );
                 })}
+                <Profile
+                    key="ägg"
+                    role="ägg"
+                    people={[]}
+                />
             </div>
         </div>
     );

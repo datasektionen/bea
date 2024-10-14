@@ -44,3 +44,27 @@
     line-height: 1.2rem;
     margin-bottom: 5px;
 }
+
+.aggContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aggContainer > p {
+    max-width: 500px;
+    line-height: 1.2rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.aggContainer > ol {
+    color: var(--primary-text);
+}
+
+.aggContainer > ol > li > p {
+    line-height: 1.2rem;
+    font-size: 1rem;
+    margin-top: 8px;
+}
