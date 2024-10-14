@@ -18,7 +18,15 @@
     font-size: 18px;
     display: block;
 
-    &:hover {
+    /* On mobile devices, the hover effect should not be applied since it's left on hover after clicking */
+    @media (hover: hover) {
+        &:hover {
+            background-color: yellow;
+            color: black;
+        }
+    }
+
+    &:active {
         background-color: yellow;
         color: black;
     }
