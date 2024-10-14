@@ -11,7 +11,8 @@ import { useRouter } from 'next/navigation';
 export default function Laskkyl() {
     const [laskkylData, setLaskkylData] = useState<LaskkylData | undefined>();
     const minstaKopRef = React.useRef<HTMLHeadingElement>(null);
-    const router = useRouter();
+    const dataTimerRef = React.useRef<NodeJS.Timeout>();
+    // const router = useRouter();
 
     function toggleFullscreen() {
         if (document.fullscreenElement !== null) {
@@ -21,29 +22,29 @@ export default function Laskkyl() {
         }
     }
 
-    async function fetchLaskkylData() {
-        try {
-            const laskkylData = await getLaskkylData();
-            setLaskkylData(laskkylData);
-            console.log('Fetched Laskkyl data:', laskkylData);
-        } catch (error) {
-            console.error('Failed to fetch Laskkyl data:', error);
-        }
-    }
-
     useEffect(() => {
-        // Fetch data and start polling every minute
+        async function fetchLaskkylData() {
+            if (dataTimerRef.current) clearTimeout(dataTimerRef.current);
+            try {
+                const laskkylData = await getLaskkylData();
+                setLaskkylData(laskkylData);
+                console.log('Fetched Laskkyl data:', laskkylData);
+            } catch (error) {
+                console.error('Failed to fetch Laskkyl data:', error);
+            }
+            dataTimerRef.current = setTimeout(fetchLaskkylData, 1000 * 4);
+        }
+
         fetchLaskkylData();
-        const dataInterval = setInterval(fetchLaskkylData, 1000 * 60);
 
         // Reload page every 10 minutes
         // const reloadInterval = setInterval(() => router.replace('/reload'), 1000 * 60 * 10);
 
         return () => {
-            clearInterval(dataInterval);
+            if (dataTimerRef.current) clearTimeout(dataTimerRef.current);
             // clearInterval(reloadInterval);
         };
-    }, [router]);
+    }, []);
 
     useEffect(() => {
         if (minstaKopRef.current) {
