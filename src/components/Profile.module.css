@@ -39,3 +39,8 @@
 .personItem > p {
     line-height: 1em;
 }
+
+.nameH4 {
+    line-height: 1.2rem;
+    margin-bottom: 5px;
+}

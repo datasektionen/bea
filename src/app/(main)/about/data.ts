@@ -9,15 +9,42 @@ export const internFunkisar: Record<Role, Person[]> = {
         },
     ],
     'sektionslokalsansvarig-media': [],
-    stadskrii: [],
+    stadskrii: [
+        {
+            name: 'Hannes Hultin',
+            email: 'hanneshu',
+            emailType: 'data',
+        },
+    ],
+    arkadmicke: [
+        {
+            name: 'Dmitry Chirin',
+            email: 'dmitryc',
+            emailType: 'data',
+        },
+        {
+            name: 'Oscar Eriksson',
+            email: 'oscae@kth.se',
+            emailType: 'custom',
+        },
+        {
+            name: 'Natan Söderström',
+            email: 'natans@kth.se',
+            emailType: 'custom',
+        },
+    ],
     flippermicke: [
         {
             name: 'Samuel Hörnell',
             email: 'shornell',
             emailType: 'data',
         },
+        {
+            name: 'Elias Engström',
+            email: 'elengst@kth.se',
+            emailType: 'custom',
+        },
     ],
-    arkadmicke: [],
     laskkylsansvarig: [
         {
             name: 'Carl Liljencrantz',
@@ -43,6 +70,11 @@ export const internFunkisar: Record<Role, Person[]> = {
             email: 'casimirb',
             emailType: 'data',
         },
+        {
+            name: 'Olof Bargholtz Melcherson',
+            email: 'olofbm',
+            emailType: 'data',
+        },
     ],
     mario: [
         {
@@ -55,39 +87,38 @@ export const internFunkisar: Record<Role, Person[]> = {
             email: 'lukmal',
             emailType: 'data',
         },
-        {
-            name: 'Sofie Bälter',
-            email: 'sbalter',
-            emailType: 'data',
-        },
     ],
     mister: [
         {
-            name: 'Soma Szabo',
-            email: 'somasz',
-            emailType: 'data',
+            name: 'Karmela Eliasson',
+            email: 'karmela@kth.se',
+            emailType: 'custom',
         },
     ],
     misty: [
         {
-            name: 'Karl-Isac Åström',
+            name: 'Karl-Isac Åström (Kaffe)',
             email: 'kiastrom',
             emailType: 'data',
         },
         {
-            name: 'Kristin Rosen',
+            name: 'Kristin Rosen (Te)',
             email: 'kristinr@kth.se',
             emailType: 'custom',
         },
     ],
-    mog: [
+    moms: [
         {
-            name: 'Olof Bargholtz Melcherson',
-            email: 'olofbm',
+            name: 'Linn Benali',
+            email: 'lbenali',
+            emailType: 'data',
+        },
+        {
+            name: 'Daniel Norman',
+            email: 'dnorma',
             emailType: 'data',
         },
     ],
-    moms: [],
     money: [
         {
             name: 'Jonathan Blomlöf',
@@ -98,6 +129,11 @@ export const internFunkisar: Record<Role, Person[]> = {
             name: 'Lukas Malmberg',
             email: 'lukmal',
             emailType: 'data',
+        },
+        {
+            name: 'Liam Thorell',
+            email: 'liamt@kth.se',
+            emailType: 'custom',
         },
     ],
     mopp: [
@@ -111,8 +147,29 @@ export const internFunkisar: Record<Role, Person[]> = {
             email: 'shornell',
             emailType: 'data',
         },
+        {
+            name: 'Tore Forslin',
+            email: 'tforslin',
+            emailType: 'data',
+        },
     ],
-    movie: [],
+    movie: [
+        {
+            name: 'Jennifer Köhler',
+            email: 'jenkoh',
+            emailType: 'data',
+        },
+        {
+            name: 'Nicklas Peng',
+            email: 'npeng',
+            emailType: 'data',
+        },
+        {
+            name: 'Klara Romlin',
+            email: 'kromlin',
+            emailType: 'data',
+        },
+    ],
     moist: [
         {
             name: 'Emma Ericsson',
@@ -127,13 +184,18 @@ export const internFunkisar: Record<Role, Person[]> = {
     ],
     mucka: [
         {
-            name: 'Melvin Jakobsson',
+            name: 'Melvin Jakobsson (Hall)',
             email: 'melvinj',
             emailType: 'data',
         },
         {
-            name: 'Adam Sjöberg',
+            name: 'Adam Sjöberg (Pant)',
             email: 'adamsjo',
+            emailType: 'data',
+        },
+        {
+            name: 'Filip Ramslöv (Catwalk)',
+            email: 'framslov',
             emailType: 'data',
         },
     ],
@@ -148,12 +210,22 @@ export const internFunkisar: Record<Role, Person[]> = {
             email: 'sbalter',
             emailType: 'data',
         },
+        {
+            name: 'Isak Lefèvre',
+            email: 'lefevre',
+            emailType: 'data',
+        },
     ],
     matrix: [
         {
             name: 'Carl Liljencrantz',
             email: 'liljencr',
             emailType: 'data',
+        },
+        {
+            name: 'Alvin Westling',
+            email: 'alvinw@kth.se',
+            emailType: 'custom',
         },
     ],
 };

@@ -34,7 +34,7 @@ export default function Profile(props: ProfileProps) {
                     <div
                         key={person.name}
                         className={styles.personItem}>
-                        <h4>{person.name}</h4>
+                        <h4 className={styles.nameH4}>{person.name}</h4>
                         {person.email && person.emailType && (
                             <p>
                                 {/* TODO: Maybe make this mailto but more scrapers might find it then... */}
