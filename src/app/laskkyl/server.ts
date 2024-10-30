@@ -21,6 +21,10 @@ const laskkylData: LaskkylData = {
                 name: 'Kong Strong',
                 price: 8,
             },
+            {
+                name: 'Hell!!',
+                price: 4,
+            },
         ],
         snacks: [
             {
