@@ -29,7 +29,7 @@ const laskkylData: LaskkylData = {
         snacks: [
             {
                 name: 'Risifrutti',
-                price: 12,
+                price: 13,
             },
             {
                 name: 'Pingvinstång',
