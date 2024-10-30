@@ -1,0 +1,7 @@
+.table {
+    fill: #aaa;
+    stroke: #333;
+}
+.table:hover {
+    fill: #333;
+}

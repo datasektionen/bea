@@ -13,7 +13,7 @@ export default function Meta() {
                 </p>
                 <h2>Bordsplacering</h2>
                 <p>
-                    <a href="/">Här</a> hittar du en länk till bordsplaceringen i META. Efter bokning ska borden ställas
+                    <a href="/floorplan">Här</a> hittar du en länk till bordsplaceringen i META. Efter bokning ska borden ställas
                     tillbaka enligt den.
                 </p>
             </Info>
