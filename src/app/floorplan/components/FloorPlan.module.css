@@ -1,7 +1,19 @@
-.table {
-    fill: #aaa;
-    stroke: #333;
-}
 .table:hover {
     fill: #333;
+}
+.room:hover {
+    cursor: pointer;
+}
+.room:hover path {
+    fill: #ddd;
+}
+.room:hover text {
+    text-decoration: underline;
+}
+.sofa:hover rect {
+    fill: #544;
+}
+.sofa:hover text {
+    text-decoration: underline;
+    fill: white;
 }

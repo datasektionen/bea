@@ -1,5 +1,6 @@
 import React from 'react';
 import Info from '@/components/Info';
+import FloorPlan from '@/app/floorplan/components/FloorPlan';
 
 export default function Meta() {
     return (
@@ -13,9 +14,10 @@ export default function Meta() {
                 </p>
                 <h2>Bordsplacering</h2>
                 <p>
-                    <a href="/floorplan">Här</a> hittar du en länk till bordsplaceringen i META. Efter bokning ska borden ställas
+                    Nedan ser du bordsplaceringen i META. Efter bokning ska borden ställas
                     tillbaka enligt den.
                 </p>
+                <FloorPlan />
             </Info>
         </div>
     );
