@@ -26,6 +26,7 @@ export default function FloorPlan() {
 
                 {/* Catwalk */}
                 <path d="M 225 312 H 275 V 255 H 280 M 314 255 H 594 V 227" />
+                <path d="M 282 312 h 35 V 255 H 282 Z m 0 -11 h 35 m -35 -11 h 35 m -35 -11 h 35 m -35 -12 h 35" />
 
                 {/* Hall-ramp-vägg-grejen */}
                 <path d="M 750 645 H 794 V 602" />
