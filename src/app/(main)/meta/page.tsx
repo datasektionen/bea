@@ -1,6 +1,6 @@
 import React from 'react';
 import Info from '@/components/Info';
-import FloorPlan from '@/app/floorplan/components/FloorPlan';
+import FloorPlan from '@/components/FloorPlan';
 
 export default function Meta() {
     return (
