@@ -1,5 +1,6 @@
 .table:hover {
-    fill: #333;
+    fill: #888;
+    cursor: default;
 }
 .room:hover {
     cursor: pointer;
@@ -10,8 +11,11 @@
 .room:hover text {
     text-decoration: underline;
 }
+.sofa:hover {
+    cursor: default;
+}
 .sofa:hover rect {
-    fill: #544;
+    fill: #b88;
 }
 .sofa:hover text {
     text-decoration: underline;

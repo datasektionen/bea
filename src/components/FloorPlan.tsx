@@ -100,34 +100,85 @@ export default function FloorPlan() {
             {/* Tables */}
             <g fill="#aaa" stroke="#333">
                 {/* Tables left side */}
-                <rect x="352" y="386" width="70" height="30" rx="2" className={styles.table} />
-                <rect x="422" y="386" width="70" height="30" rx="2" className={styles.table} />
-                <rect x="352" y="445" width="70" height="30" rx="2" className={styles.table} />
-                <rect x="422" y="445" width="70" height="30" rx="2" className={styles.table} />
-                <rect x="410" y="545" width="70" height="30" rx="2" className={styles.table} />
+                <g className={styles.table}>
+                    <rect x="352" y="386" width="70" height="30" rx="2" />
+                    <text x="385" y="408" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">NS</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="422" y="386" width="70" height="30" rx="2" className={styles.table} />
+                    <text x="455" y="408" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">NS</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="352" y="445" width="70" height="30" rx="2" className={styles.table} />
+                    <text x="385" y="467" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">NS</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="422" y="445" width="70" height="30" rx="2" className={styles.table} />
+                    <text x="455" y="467" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">NS</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="410" y="545" width="70" height="30" rx="2" className={styles.table} />
+                    <text x="443" y="567" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">NS</text>
+                </g>
 
                 {/* Tables right side */}
-                <rect x="578" y="400" width="70" height="30" rx="2" className={styles.table} />
-                <rect x="648" y="400" width="70" height="30" rx="2" className={styles.table} />
-                <rect x="578" y="480" width="70" height="30" rx="2" className={styles.table} />
-                <rect x="648" y="480" width="70" height="30" rx="2" className={styles.table} />
-                <rect x="578" y="552" width="70" height="30" rx="2" className={styles.table} />
-                <rect x="648" y="552" width="70" height="30" rx="2" className={styles.table} />
+                <g className={styles.table}>
+                    <rect x="578" y="400" width="70" height="30" rx="2" className={styles.table} />
+                    <text x="611" y="422" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">G</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="648" y="400" width="70" height="30" rx="2" className={styles.table} />
+                    <text x="681" y="422" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">G</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="578" y="480" width="70" height="30" rx="2" className={styles.table} />
+                    <text x="611" y="502" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">G</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="648" y="480" width="70" height="30" rx="2" className={styles.table} />
+                    <text x="681" y="502" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">OF</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="578" y="552" width="70" height="30" rx="2" className={styles.table} />
+                    <text x="611" y="574" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">G</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="648" y="552" width="70" height="30" rx="2" className={styles.table} />
+                    <text x="681" y="574" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">OF</text>
+                </g>
 
                 {/* Tables near catwalk */}
-                <rect x="550" y="258" width="30" height="70" rx="2" className={styles.table} />
-                <rect x="475" y="258" width="30" height="70" rx="2" className={styles.table} />
-                <rect x="400" y="258" width="30" height="70" rx="2" className={styles.table} />
+                <g className={styles.table}>
+                    <rect x="550" y="258" width="30" height="70" rx="2" className={styles.table} />
+                    <text x="558" y="291" textAnchor="middle" strokeWidth="1" transform="rotate(90, 558, 291)" fill="white" stroke="white" fontSize="23px">NL</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="475" y="258" width="30" height="70" rx="2" className={styles.table} />
+                    <text x="483" y="291" textAnchor="middle" strokeWidth="1" transform="rotate(90, 483, 291)" fill="white" stroke="white" fontSize="23px">NL</text>
+                </g>
+                <g className={styles.table}>
+                    <rect x="400" y="258" width="30" height="70" rx="2" className={styles.table} />
+                    <text x="408" y="291" textAnchor="middle" strokeWidth="1" transform="rotate(90, 408, 291)" fill="white" stroke="white" fontSize="23px">NL</text>
+                </g>
             </g>
 
             {/* Sofas */}
-            <g className={styles.sofa} fill="#baa">
+            <g className={styles.sofa} fill="#d99">
                 <rect x="684" y="290" width="34" height="70" rx="5" />
                 <text x="702" y="330" textAnchor="middle" strokeWidth="1" fill="black" fontSize="20px">S</text>
             </g>
-            <g className={styles.sofa} fill="#baa">
+            <g className={styles.sofa} fill="#d99">
                 <rect x="410.5" y="605.5" width="70" height="34" rx="5" />
                 <text x="445" y="630" textAnchor="middle" strokeWidth="1" fill="black" fontSize="20px">S</text>
+            </g>
+
+            {/* Table explainations */}
+            <g textAnchor="start" strokeWidth="1" fill="black" stroke="black" fontSize="23px">
+                <text x="120" y="600">NL = Nya Lilla</text>
+                <text x="120" y="630">NS = Nya Stora</text>
+                <text x="120" y="660">G = Gamla bord</text>
+                <text x="120" y="690">OF = Ofällbara bord</text>
+                <text x="120" y="720">S = Soffa</text>
             </g>
         </svg>
     );
