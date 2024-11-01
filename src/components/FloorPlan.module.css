@@ -1,0 +1,23 @@
+.table:hover {
+    fill: #888;
+    cursor: default;
+}
+.room:hover {
+    cursor: pointer;
+}
+.room:hover path {
+    fill: #ddd;
+}
+.room:hover text {
+    text-decoration: underline;
+}
+.sofa:hover {
+    cursor: default;
+}
+.sofa:hover rect {
+    fill: #b88;
+}
+.sofa:hover text {
+    text-decoration: underline;
+    fill: white;
+}
