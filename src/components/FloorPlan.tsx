@@ -10,10 +10,10 @@ export default function FloorPlan() {
             {/* Walls, rooms and other lines. */}
             <g fill="none" stroke="black" strokeWidth={WALL_WIDTH}>
                 {/* Outer walls. */}
-                <path d="M 375 645 H 344 L 226 484 V 285 H 190" />
-                <path d="M 190 255 H 226 V 215 H 280 V 188" />
-                <path d="M 312 188 V 215 H 422 V 188" />
-                <path d="M 455 188 V 215 H 552 V 188" />
+                <path d="M 375 645 H 344 L 226 484 V 288 H 190" />
+                <path d="M 190 255 H 226 V 215 H 278 V 188" />
+                <path d="M 314 188 V 215 H 419 V 188" />
+                <path d="M 455 188 V 215 H 550 V 188" />
                 <path d="M 580 188 V 215 H 594 V 225 H 720 V 250" />
                 <path d="M 720 280 V 600 L 725 605 H 742 L 747 600 V 302 H 938 V 656 H 900 V 680 H 862" />
                 <path d="M 798 680 H 762" />
@@ -34,67 +34,111 @@ export default function FloorPlan() {
 
                 {/* Media spritis */}
                 <g fill="white" className={styles.room}>
-                    <path d="M 190 282.5 V 368 H 150 L 38 197 H 190 V 257.5" />
+                    <path d="M 190 285.5 V 368 H 150 L 38 197 H 190 V 257.5" />
                     <text x="140" y="270" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">Me2</text>
                 </g>
+                {/* Door */}
+                <path d="M 227 264 v -1 a -20 20 0 0 1 20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 225 284 h 23" stroke="black" strokeWidth="3" />
+                <path d="M 226 256 v 8" />
 
                 {/* Mötesrummet */}
                 <g fill="white" className={styles.room}>
                     <path d="M 282.5 188 H 225 V 32 H 390 V 188 H 309.5" />
                     <text x="307" y="118" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">Mötesrummet</text>
                 </g>
+                {/* Door */}
+                <path d="M 307 181 a -20 -20 0 0 0 -20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 307 180 v 23" stroke="black" strokeWidth="3" />
+                <path d="M 305.5 203 h 6" />
+                <path d="M 280 203 h 8" />
 
                 {/* Media förråd */}
                 <g fill="white" className={styles.room}>
-                    <path d="M 424.5 188 H 405 V 32 H 540 V 188 H 452.5" />
+                    <path d="M 421.5 188 H 405 V 32 H 540 V 188 H 452.5" />
                     <text x="472" y="118" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">Me1</text>
                 </g>
+                {/* Door */}
+                <path d="M 427 181 a 20 20 0 0 1 20 20" stroke="gray" strokeDasharray="4" strokeWidth="2" />
+                <path d="M 427 180 v 23" stroke="black" strokeWidth="3" />
+                <path d="M 420 203 h 8.5" />
+                <path d="M 445 203 h 8" />
 
                 {/* Data förråd */}
                 <g fill="white" className={styles.room}>
                     {/* Invisible door paths to fill correctly. */}
-                    <path d="M 650 108 V 128 L 650 188 H 554.5 Z" stroke="none" />
-                    <path d="M 554.5 188 H 548 V 32 H 650 V 108" />
+                    <path d="M 650 108 V 128 L 650 188 H 552.5 Z" stroke="none" />
+                    <path d="M 552.5 188 H 548 V 32 H 650 V 108" />
                     <path d="M 650 128 V 188 H 577.5" />
                     <text x="598" y="118" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">D1</text>
                 </g>
+                {/* Door */}
+                <path d="M 555 181 a 20 20 0 0 1 20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 555 180 v 23" stroke="black" strokeWidth="3" />
+                <path d="M 552 203 h 4.5" />
+                <path d="M 574 203 h 6" />
 
                 {/* Data spritis */}
                 <g fill="white" className={styles.room}>
                     <path d="M 652.5 32 H 790 V 165 H 720 V 145 H 652.5" />
                     <text x="725" y="102" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">D2</text>
                 </g>
+                {/* Door */}
+                <path d="M 629.5 127 a 20 20 0 0 1 20 -20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 628.5 127 h 24" stroke="black" strokeWidth="3" />
 
                 {/* Spökförrådet */}
                 <g fill="white" className={styles.room}>
                     <path d="M 717.5 250 H 850 V 280 H 717.5" />
                     <text x="760" y="272" textAnchor="middle" strokeWidth="1" fill="black" fontSize="22px">👻</text>
                 </g>
+                {/* Door */}
+                <path d="M 698 254 a 20 20 0 0 0 20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 697 254 h 24" stroke="black" strokeWidth="3" />
+                <path d="M 720 273 v 6" />
 
                 {/* Too-wah-lett */}
                 <g fill="white" className={styles.room}>
-                    <path d="M 800 311 V 302 H 747 V 350 H 800 V 332" />
+                    <path d="M 800 313 V 302 H 747 V 350 H 800 V 330.5" />
                     <text x="775" y="335" textAnchor="middle" strokeWidth="1" fill="black" fontSize="18px">WC</text>
                 </g>
+                {/* Door */}
+                <path d="M 822 311.5 a 20 20 0 0 1 -20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 799 311.5 h 24" stroke="black" strokeWidth="3" />
 
                 {/* Too-wah-lett */}
                 <g fill="white" className={styles.room}>
-                    <path d="M 800 376 V 350 H 747 V 405 H 800 V 399" />
+                    <path d="M 800 376 V 350 H 747 V 405 H 800 V 393.5" />
                     <text x="775" y="386" textAnchor="middle" strokeWidth="1" fill="black" fontSize="18px">WC</text>
                 </g>
+                {/* Door */}
+                <path d="M 822 374.5 a 20 20 0 0 1 -20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 799 374.5 h 24" stroke="black" strokeWidth="3" />
 
                 <path d="M 800 405 V 435 H 748" />
 
                 {/* Large bathroom */}
                 <g fill="white" className={styles.room}>
-                    <path d="M 877 432 H 850 V 344 H 938 V 432 H 900" />
+                    <path d="M 877 432 H 850 V 344 H 938 V 432 H 896" />
                     <text x="894" y="398" textAnchor="middle" strokeWidth="1" fill="black" fontSize="18px">WC</text>
                 </g>
+                {/* Door */}
+                <path d="M 897 434.5 a 20 20 0 0 1 -20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 875.5 434.5 v 21" stroke="black" strokeWidth="3" />
 
-                {/* Large bathroom */}
+                {/* Städskrubben */}
                 <g fill="white" className={styles.room}>
-                    <path d="M 850 332 V 344 H 938 V 302 H 850 V 311" />
+                    <path d="M 850 330.5 V 344 H 938 V 302 H 850 V 313" />
                 </g>
+                {/* Door */}
+                <path d="M 827 311.5 a 20 20 0 0 0 20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 826 311.5 h 24" stroke="black" strokeWidth="3" />
+
+                {/* Main door */}
+                <path d="M 827.5 680 a 32 32 0 0 1 -32 32" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 796 680 v 32" stroke="black" strokeWidth="3" />
+                <path d="M 831.5 680 a 32 32 0 0 0 32 32" stroke="gray" strokeDasharray="5" strokeWidth="2" />
+                <path d="M 863.5 680 v 32" stroke="black" strokeWidth="3" />
             </g>
 
             {/* Tables */}
