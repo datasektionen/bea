@@ -5,7 +5,8 @@ const WALL_WIDTH = 5;
 export default function FloorPlan() {
     return (
         <svg width="100%" height="100%" viewBox="0 0 1000 1000">
-            <rect x="10" y="10" width="1000" height="1000" stroke="lightgray" fill="white" />
+            {/* White background everywhere inside META. */}
+            <path fill="white" d="M 375 645 H 344 L 226 484 V 288 H 190 V 255 H 226 V 215 H 278 V 188 H 552.5 H 548 V 32 H 790 V 165 H 720 V 145 H 652.5 V 188 H 580 V 215 H 594 V 225 H 720 V 600 L 725 605 H 742 L 747 600 V 302 H 938 V 656 H 900 V 680 H 862 H 762 V 653 H 748 V 642 H 714 V 675 H 586 V 642 H 411 V 645 Z" />
 
             {/* Walls, rooms and other lines. */}
             <g fill="none" stroke="black" strokeWidth={WALL_WIDTH}>
@@ -18,8 +19,9 @@ export default function FloorPlan() {
                 <path d="M 720 280 V 600 L 725 605 H 742 L 747 600 V 302 H 938 V 656 H 900 V 680 H 862" />
                 <path d="M 798 680 H 762" />
                 <path d="M 762 705 V 653 H 748 V 642 H 714 V 705 Z" />
+                <path d="M 714 675 H 586" />
                 <path d="M 543 705 V 642 H 586 V 705 Z" />
-                <path d="M 543 680 H 411 V 642 H 543" />
+                <path d="M 543 642 H 410" />
 
                 {/* The bar */}
                 <path d="M 375 645 V 555 L 318 475 V 382 H 350 V 470 L 408 546 V 645 Z" />
