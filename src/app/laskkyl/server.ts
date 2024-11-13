@@ -10,8 +10,12 @@ const laskkylData: LaskkylData = {
     products: {
         drinks: [
             {
-                name: 'Läsk/Festis',
+                name: 'Läsk',
                 price: 8,
+            },
+            {
+                name: 'Festis',
+                price: 6,
             },
             /* {
                 name: 'Bubbelvatten',
