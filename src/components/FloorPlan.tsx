@@ -1,8 +1,19 @@
+'use client';
+
+import { createRef } from 'react';
+import { ClickPopup, ClickPopupRef } from './ClickPopup';
 import styles from './FloorPlan.module.css';
 
 const WALL_WIDTH = 5;
 
 export default function FloorPlan() {
+    const meetingRoom = createRef<ClickPopupRef>();
+    const d1 = createRef<ClickPopupRef>();
+    const me1 = createRef<ClickPopupRef>();
+    const cleaningRoom = createRef<ClickPopupRef>();
+    const fuses = createRef<ClickPopupRef>();
+    const ghost = createRef<ClickPopupRef>();
+
     return (
         <svg width="100%" height="100%" viewBox="0 0 1000 1000">
             {/* White background everywhere inside META. */}
@@ -35,7 +46,7 @@ export default function FloorPlan() {
                 <path d="M 794 602 H 810 V 475 H 794 Z" />
 
                 {/* Media spritis */}
-                <g fill="white" className={styles.room}>
+                <g fill="white">
                     <path d="M 190 285.5 V 368 H 150 L 38 197 H 190 V 257.5" />
                     <text x="140" y="270" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">Me2</text>
                 </g>
@@ -45,7 +56,7 @@ export default function FloorPlan() {
                 <path d="M 226 256 v 8" />
 
                 {/* Mötesrummet */}
-                <g fill="white" className={styles.room}>
+                <g fill="white" className={styles.room} onClick={e => meetingRoom.current?.toggle(e)}>
                     <path d="M 282.5 188 H 225 V 32 H 390 V 188 H 309.5" />
                     <text x="307" y="118" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">Mötesrummet</text>
                 </g>
@@ -54,9 +65,18 @@ export default function FloorPlan() {
                 <path d="M 307 180 v 23" stroke="black" strokeWidth="3" />
                 <path d="M 305.5 203 h 6" />
                 <path d="M 280 203 h 8" />
+                <ClickPopup ref={meetingRoom}>
+                    <div style={{ maxWidth: '300px' }} lang='sv'>
+                        <h3 className={styles.popupTitle}>Mötesrummet</h3>
+                        <p className={styles.popupText}>Ett mindre rum som kan bokas av sektions&shy;medlemar, främst för sektions&shy;verksamhet.</p>
+                        <a href="https://bokning.datasektionen.se/bookings/8">
+                            <button className={styles.popupButton}>Boka mötesrummet</button>
+                        </a>
+                    </div>
+                </ClickPopup>
 
                 {/* Media förråd */}
-                <g fill="white" className={styles.room}>
+                <g fill="white" className={styles.room} onClick={e => me1.current?.toggle(e)}>
                     <path d="M 421.5 188 H 405 V 32 H 540 V 188 H 452.5" />
                     <text x="472" y="118" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">Me1</text>
                 </g>
@@ -65,15 +85,28 @@ export default function FloorPlan() {
                 <path d="M 427 180 v 23" stroke="black" strokeWidth="3" />
                 <path d="M 420 203 h 8.5" />
                 <path d="M 445 203 h 8" />
+                <ClickPopup ref={me1}>
+                    <div style={{ maxWidth: '300px' }} lang='sv'>
+                        <h3 className={styles.popupTitle}>Medias förråd</h3>
+                        <p className={styles.popupText}>Förvaringsutrymme för Sektionen för Medieteknik.</p>
+                    </div>
+                </ClickPopup>
 
                 {/* Data förråd */}
-                <g fill="white" className={styles.room}>
+                <g fill="white" className={styles.room} onClick={e => d1.current?.toggle(e)}>
                     {/* Invisible door paths to fill correctly. */}
                     <path d="M 650 108 V 128 L 650 188 H 552.5 Z" stroke="none" />
                     <path d="M 552.5 188 H 548 V 32 H 650 V 108" />
                     <path d="M 650 128 V 188 H 577.5" />
                     <text x="598" y="118" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">D1</text>
                 </g>
+                <ClickPopup ref={d1}>
+                    <div style={{ maxWidth: '300px' }} lang='sv'>
+                        <h3 className={styles.popupTitle}>Datas förråd</h3>
+                        <p className={styles.popupText}>Förvaringsutrymme för Datas&shy;ektionens nämder och projekt.</p>
+                    </div>
+                </ClickPopup>
+
                 {/* Door */}
                 <path d="M 555 181 a 20 20 0 0 1 20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
                 <path d="M 555 180 v 23" stroke="black" strokeWidth="3" />
@@ -81,7 +114,7 @@ export default function FloorPlan() {
                 <path d="M 574 203 h 6" />
 
                 {/* Data spritis */}
-                <g fill="white" className={styles.room}>
+                <g fill="white">
                     <path d="M 652.5 32 H 790 V 165 H 720 V 145 H 652.5" />
                     <text x="725" y="102" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">D2</text>
                 </g>
@@ -90,7 +123,7 @@ export default function FloorPlan() {
                 <path d="M 628.5 127 h 24" stroke="black" strokeWidth="3" />
 
                 {/* Spökförrådet */}
-                <g fill="white" className={styles.room}>
+                <g fill="white" className={styles.room} onClick={e => ghost.current?.toggle(e)}>
                     <path d="M 717.5 250 H 850 V 280 H 717.5" />
                     <text x="760" y="272" textAnchor="middle" strokeWidth="1" fill="black" fontSize="22px">👻</text>
                 </g>
@@ -98,9 +131,15 @@ export default function FloorPlan() {
                 <path d="M 698 254 a 20 20 0 0 0 20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
                 <path d="M 697 254 h 24" stroke="black" strokeWidth="3" />
                 <path d="M 720 273 v 6" />
+                <ClickPopup ref={ghost}>
+                    <div style={{ maxWidth: '300px' }} lang='sv'>
+                        <h3 className={styles.popupTitle}>Spökförrådet</h3>
+                        <p className={styles.popupText}>Lääääskigt 👻</p>
+                    </div>
+                </ClickPopup>
 
                 {/* Too-wah-lett */}
-                <g fill="white" className={styles.room}>
+                <g fill="white">
                     <path d="M 800 313 V 302 H 747 V 350 H 800 V 330.5" />
                     <text x="775" y="335" textAnchor="middle" strokeWidth="1" fill="black" fontSize="18px">WC</text>
                 </g>
@@ -109,7 +148,7 @@ export default function FloorPlan() {
                 <path d="M 799 311.5 h 24" stroke="black" strokeWidth="3" />
 
                 {/* Too-wah-lett */}
-                <g fill="white" className={styles.room}>
+                <g fill="white">
                     <path d="M 800 376 V 350 H 747 V 405 H 800 V 393.5" />
                     <text x="775" y="386" textAnchor="middle" strokeWidth="1" fill="black" fontSize="18px">WC</text>
                 </g>
@@ -117,10 +156,19 @@ export default function FloorPlan() {
                 <path d="M 822 374.5 a 20 20 0 0 1 -20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
                 <path d="M 799 374.5 h 24" stroke="black" strokeWidth="3" />
 
-                <path d="M 800 405 V 435 H 748" />
+                {/* Proppskåpet */}
+                <g fill="white" className={styles.room} onClick={e => fuses.current?.toggle(e)}>
+                    <path d="M 800 405 V 435 H 747 V 405 Z" />
+                </g>
+                <ClickPopup ref={fuses}>
+                    <div style={{ maxWidth: '300px' }} lang='sv'>
+                        <h3 className={styles.popupTitle}>Proppskåpet</h3>
+                        <p className={styles.popupText}>Här kan man byta proppar om proppen går.</p>
+                    </div>
+                </ClickPopup>
 
                 {/* Large bathroom */}
-                <g fill="white" className={styles.room}>
+                <g fill="white">
                     <path d="M 877 432 H 850 V 344 H 938 V 432 H 896" />
                     <text x="894" y="398" textAnchor="middle" strokeWidth="1" fill="black" fontSize="18px">WC</text>
                 </g>
@@ -129,12 +177,18 @@ export default function FloorPlan() {
                 <path d="M 875.5 434.5 v 21" stroke="black" strokeWidth="3" />
 
                 {/* Städskrubben */}
-                <g fill="white" className={styles.room}>
+                <g fill="white" className={styles.room} onClick={e => cleaningRoom.current?.toggle(e)}>
                     <path d="M 850 330.5 V 344 H 938 V 302 H 850 V 313" />
                 </g>
                 {/* Door */}
                 <path d="M 827 311.5 a 20 20 0 0 0 20 20" stroke="gray" strokeDasharray="5" strokeWidth="2" />
                 <path d="M 826 311.5 h 24" stroke="black" strokeWidth="3" />
+                <ClickPopup ref={cleaningRoom}>
+                    <div style={{ maxWidth: '300px' }} lang='sv'>
+                        <h3 className={styles.popupTitle}>Städskrubben</h3>
+                        <p className={styles.popupText}>Här finns diverse städutrustning.</p>
+                    </div>
+                </ClickPopup>
 
                 {/* Main door */}
                 <path d="M 827.5 680 a 32 32 0 0 1 -32 32" stroke="gray" strokeDasharray="5" strokeWidth="2" />

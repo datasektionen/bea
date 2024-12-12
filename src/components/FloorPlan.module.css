@@ -18,6 +18,23 @@
     fill: #b88;
 }
 .sofa:hover text {
-    text-decoration: underline;
-    fill: white;
+    fill: #eee;
+}
+.popupTitle {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+.popupText {
+    line-height: 22px;
+    hyphens: auto;
+}
+.popupButton {
+    padding: 2px 8px;
+    margin: 8px 0px;
+    border-radius: 5px;
+    outline: 0;
+    border: none;
+    background-color: #0ea5e9;
+    font-size: 14px;
+    cursor: pointer;
 }
