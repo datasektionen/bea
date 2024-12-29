@@ -7,6 +7,9 @@ jobs:
     lint:
         name: Lint
         runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: ./frontend
         steps:
             - name: Git checkout
               uses: actions/checkout@v3
@@ -15,6 +18,7 @@ jobs:
 
             - uses: actions/setup-node@v4
               with:
+                  cache-dependency-path: ./frontend/package-lock.json
                   node-version: 22.5
                   cache: 'npm'
 
