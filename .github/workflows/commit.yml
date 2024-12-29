@@ -7,6 +7,9 @@ jobs:
     lint:
         name: Lint
         runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: ./frontend
         steps:
             - name: Git checkout
               uses: actions/checkout@v3
