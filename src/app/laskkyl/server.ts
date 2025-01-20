@@ -47,6 +47,14 @@ const laskkylData: LaskkylData = {
                 name: 'Wasa Sandwich',
                 price: 12,
             },
+            {
+                name: 'Godispåse',
+                price: 13,
+            },
+            {
+                name: 'KEX-choklad',
+                price: 9,
+            },
         ],
         other: [],
     },
