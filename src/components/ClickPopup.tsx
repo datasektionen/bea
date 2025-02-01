@@ -43,7 +43,6 @@ export function ClickPopup({ ref, children }: ClickPopupProps) {
         let maxWidth = null; // null = auto
         if (containerRef.current) {
             const popup = containerRef.current.getBoundingClientRect();
-            console.log(x, popup.width);
             if (Math.floor(x) + Math.floor(popup.width) > viewport.offsetWidth) {
                 x = Math.max(0, box.left + viewport.scrollLeft - popup.width);
                 maxWidth = box.left + viewport.scrollLeft;
