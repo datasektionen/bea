@@ -1,23 +1,65 @@
 'use client';
 
-import { createRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ClickPopup, ClickPopupRef } from './ClickPopup';
 import styles from './FloorPlan.module.css';
+import { useRouter } from 'next/navigation';
+import PulsatingCircle from './PulsatingCircle';
+import { copyToClipboard } from '@/app/utils/clipboard';
 
 const WALL_WIDTH = 5;
 
 export default function FloorPlan() {
-    const meetingRoom = createRef<ClickPopupRef>();
-    const d1 = createRef<ClickPopupRef>();
-    const me1 = createRef<ClickPopupRef>();
-    const cleaningRoom = createRef<ClickPopupRef>();
-    const fuses = createRef<ClickPopupRef>();
-    const ghost = createRef<ClickPopupRef>();
+    const container = useRef<SVGSVGElement>(null);
+    const meetingRoom = useRef<ClickPopupRef>(null);
+    const d1 = useRef<ClickPopupRef>(null);
+    const me1 = useRef<ClickPopupRef>(null);
+    const cleaningRoom = useRef<ClickPopupRef>(null);
+    const fuses = useRef<ClickPopupRef>(null);
+    const ghost = useRef<ClickPopupRef>(null);
+    const router = useRouter();
+    const [highlight, setHighlight] = useState<string | null>(null);
+    const [highlightEl, setHighlightEl] = useState<Element | null>(null);
+
+    function copyHighlightLink(hash: string) {
+        setHighlight(hash);
+        router.push("#" + hash, { scroll: false });
+        const url = new URL("#" + hash, location.href);
+        copyToClipboard(url.href);
+    }
+
+    useEffect(() => {
+        function readHash() {
+            setHighlight(location.hash.substring(1) || null);
+        }
+        readHash();
+        window.addEventListener("locationchange", readHash);
+        window.addEventListener("hashchange", readHash);
+        return () => {
+            window.removeEventListener("locationchange", readHash);
+            window.removeEventListener("hashchange", readHash);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!container.current) return;
+        if (!highlight) {
+            setHighlightEl(null);
+            return;
+        }
+        const attributeValue = decodeURIComponent(highlight).replace(/[åä]/g, 'a').replace(/ö/g, 'o');
+        const el = container.current?.querySelector(`[data-highlight=${attributeValue}]`);
+        setHighlightEl(el);
+        el?.scrollIntoView({ block: "center", behavior: 'smooth' });
+    }, [container, highlight]);
 
     return (
-        <svg width="100%" height="100%" viewBox="0 0 1000 1000">
+        <svg ref={container} width="100%" height="100%" viewBox="0 0 1000 1000">
             {/* White background everywhere inside META. */}
             <path fill="white" d="M 375 645 H 344 L 226 484 V 288 H 190 V 255 H 226 V 215 H 278 V 188 H 552.5 H 548 V 32 H 790 V 165 H 720 V 145 H 652.5 V 188 H 580 V 215 H 594 V 225 H 720 V 600 L 725 605 H 742 L 747 600 V 302 H 938 V 656 H 900 V 680 H 862 H 762 V 653 H 748 V 642 H 714 V 675 H 586 V 642 H 411 V 645 Z" />
+
+            {/* Highlight using a pulsating red circle to show where something is on the map. */}
+            {highlightEl && <PulsatingCircle anchor={highlightEl} />}
 
             {/* Walls, rooms and other lines. */}
             <g fill="none" stroke="black" strokeWidth={WALL_WIDTH}>
@@ -56,7 +98,7 @@ export default function FloorPlan() {
                 <path d="M 226 256 v 8" />
 
                 {/* Mötesrummet */}
-                <g fill="white" className={styles.room} onClick={e => meetingRoom.current?.toggle(e)}>
+                <g data-highlight="motesrummet" fill="white" className={styles.room} onClick={e => meetingRoom.current?.toggle(e)}>
                     <path d="M 282.5 188 H 225 V 32 H 390 V 188 H 309.5" />
                     <text x="307" y="118" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">Mötesrummet</text>
                 </g>
@@ -72,11 +114,13 @@ export default function FloorPlan() {
                         <a href="https://bokning.datasektionen.se/bookings/8">
                             <button className={styles.popupButton}>Boka mötesrummet</button>
                         </a>
+                        <br />
+                        <button className={styles.copyLinkButton} onClick={() => copyHighlightLink("motesrummet")}>Kopiera länk</button>
                     </div>
                 </ClickPopup>
 
                 {/* Media förråd */}
-                <g fill="white" className={styles.room} onClick={e => me1.current?.toggle(e)}>
+                <g data-highlight="mediaforrad" fill="white" className={styles.room} onClick={e => me1.current?.toggle(e)}>
                     <path d="M 421.5 188 H 405 V 32 H 540 V 188 H 452.5" />
                     <text x="472" y="118" textAnchor="middle" strokeWidth="1" fill="black" fontSize="23px">Me1</text>
                 </g>
@@ -89,11 +133,12 @@ export default function FloorPlan() {
                     <div style={{ maxWidth: '300px' }} lang='sv'>
                         <h3 className={styles.popupTitle}>Medias förråd</h3>
                         <p className={styles.popupText}>Förvaringsutrymme för Sektionen för Medieteknik.</p>
+                        <button className={styles.copyLinkButton} onClick={() => copyHighlightLink("mediaforrad")}>Kopiera länk</button>
                     </div>
                 </ClickPopup>
 
                 {/* Data förråd */}
-                <g fill="white" className={styles.room} onClick={e => d1.current?.toggle(e)}>
+                <g data-highlight="dataforrad" fill="white" className={styles.room} onClick={e => d1.current?.toggle(e)}>
                     {/* Invisible door paths to fill correctly. */}
                     <path d="M 650 108 V 128 L 650 188 H 552.5 Z" stroke="none" />
                     <path d="M 552.5 188 H 548 V 32 H 650 V 108" />
@@ -104,6 +149,7 @@ export default function FloorPlan() {
                     <div style={{ maxWidth: '300px' }} lang='sv'>
                         <h3 className={styles.popupTitle}>Datas förråd</h3>
                         <p className={styles.popupText}>Förvaringsutrymme för Datas&shy;ektionens nämder och projekt.</p>
+                        <button className={styles.copyLinkButton} onClick={() => copyHighlightLink("dataforrad")}>Kopiera länk</button>
                     </div>
                 </ClickPopup>
 
@@ -123,7 +169,7 @@ export default function FloorPlan() {
                 <path d="M 628.5 127 h 24" stroke="black" strokeWidth="3" />
 
                 {/* Spökförrådet */}
-                <g fill="white" className={styles.room} onClick={e => ghost.current?.toggle(e)}>
+                <g data-highlight="spokforradet" fill="white" className={styles.room} onClick={e => ghost.current?.toggle(e)}>
                     <path d="M 717.5 250 H 850 V 280 H 717.5" />
                     <text x="760" y="272" textAnchor="middle" strokeWidth="1" fill="black" fontSize="22px">👻</text>
                 </g>
@@ -135,6 +181,7 @@ export default function FloorPlan() {
                     <div style={{ maxWidth: '300px' }} lang='sv'>
                         <h3 className={styles.popupTitle}>Spökförrådet</h3>
                         <p className={styles.popupText}>Lääääskigt 👻</p>
+                        <button className={styles.copyLinkButton} onClick={() => copyHighlightLink("spokforradet")}>Kopiera länk</button>
                     </div>
                 </ClickPopup>
 
@@ -157,13 +204,14 @@ export default function FloorPlan() {
                 <path d="M 799 374.5 h 24" stroke="black" strokeWidth="3" />
 
                 {/* Proppskåpet */}
-                <g fill="white" className={styles.room} onClick={e => fuses.current?.toggle(e)}>
+                <g data-highlight="proppskap" fill="white" className={styles.room} onClick={e => fuses.current?.toggle(e)}>
                     <path d="M 800 405 V 435 H 747 V 405 Z" />
                 </g>
                 <ClickPopup ref={fuses}>
                     <div style={{ maxWidth: '300px' }} lang='sv'>
                         <h3 className={styles.popupTitle}>Proppskåpet</h3>
                         <p className={styles.popupText}>Här kan man byta proppar om proppen går.</p>
+                        <button className={styles.copyLinkButton} onClick={() => copyHighlightLink("proppskap")}>Kopiera länk</button>
                     </div>
                 </ClickPopup>
 
@@ -177,7 +225,7 @@ export default function FloorPlan() {
                 <path d="M 875.5 434.5 v 21" stroke="black" strokeWidth="3" />
 
                 {/* Städskrubben */}
-                <g fill="white" className={styles.room} onClick={e => cleaningRoom.current?.toggle(e)}>
+                <g data-highlight="stadskrubben" fill="white" className={styles.room} onClick={e => cleaningRoom.current?.toggle(e)}>
                     <path d="M 850 330.5 V 344 H 938 V 302 H 850 V 313" />
                 </g>
                 {/* Door */}
@@ -187,6 +235,7 @@ export default function FloorPlan() {
                     <div style={{ maxWidth: '300px' }} lang='sv'>
                         <h3 className={styles.popupTitle}>Städskrubben</h3>
                         <p className={styles.popupText}>Här finns diverse städutrustning.</p>
+                        <button className={styles.copyLinkButton} onClick={() => copyHighlightLink("stadskrubben")}>Kopiera länk</button>
                     </div>
                 </ClickPopup>
 

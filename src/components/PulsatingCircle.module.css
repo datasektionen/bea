@@ -1,0 +1,26 @@
+@keyframes circlePulsate {
+    0% {
+        width: var(--pulsating-circle-size);
+        height: var(--pulsating-circle-size);
+    }
+    50% {
+        width: calc(1.35 * var(--pulsating-circle-size));
+        height: calc(1.35 * var(--pulsating-circle-size));
+    }
+    100% {
+        width: var(--pulsating-circle-size);
+        height: var(--pulsating-circle-size);
+    }
+}
+
+.circle {
+    position: absolute;
+    width: var(--pulsating-circle-size);
+    height: var(--pulsating-circle-size);
+    border: 5px solid red;
+    border-radius: 50%;
+    box-sizing: content-box;
+    transform: translate(-50%, -50%);
+    animation: circlePulsate 3s ease-in-out infinite;
+    pointer-events: none;
+}
