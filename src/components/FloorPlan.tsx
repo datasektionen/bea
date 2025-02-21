@@ -56,7 +56,7 @@ export default function FloorPlan() {
     return (
         <svg ref={container} width="100%" height="100%" viewBox="0 0 1000 1000">
             {/* White background everywhere inside META. */}
-            <path fill="white" d="M 375 645 H 344 L 226 484 V 288 H 190 V 255 H 226 V 215 H 278 V 188 H 552.5 H 548 V 32 H 790 V 165 H 720 V 145 H 652.5 V 188 H 580 V 215 H 594 V 225 H 720 V 600 L 725 605 H 742 L 747 600 V 302 H 938 V 656 H 900 V 680 H 862 H 762 V 653 H 748 V 642 H 714 V 675 H 586 V 642 H 411 V 645 Z" />
+            <path fill="white" d="M 375 645 H 344 L 226 484 V 288 H 190 V 255 H 226 V 215 H 278 V 188 H 552.5 H 312 V 215 H 420 V 188 H 455 V 215 H 550 V 32 H 790 V 165 H 720 V 145 H 652.5 V 188 H 580 V 215 H 594 V 225 H 720 V 600 L 725 605 H 742 L 747 600 V 302 H 938 V 656 H 900 V 680 H 862 H 762 V 653 H 748 V 642 H 714 V 675 H 586 V 642 H 411 V 645 Z" />
 
             {/* Highlight using a pulsating red circle to show where something is on the map. */}
             {highlightEl && <PulsatingCircle anchor={highlightEl} />}
@@ -251,81 +251,70 @@ export default function FloorPlan() {
                 {/* Tables left side */}
                 <g className={styles.table}>
                     <rect x="352" y="386" width="70" height="30" rx="2" />
-                    <text x="385" y="408" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">N</text>
                 </g>
                 <g className={styles.table}>
                     <rect x="422" y="386" width="70" height="30" rx="2" className={styles.table} />
-                    <text x="455" y="408" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">N</text>
                 </g>
                 <g className={styles.table}>
                     <rect x="352" y="445" width="70" height="30" rx="2" className={styles.table} />
-                    <text x="385" y="467" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">N</text>
                 </g>
                 <g className={styles.table}>
                     <rect x="422" y="445" width="70" height="30" rx="2" className={styles.table} />
-                    <text x="455" y="467" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">N</text>
-                </g>
-                <g className={styles.table}>
-                    <rect x="410" y="545" width="70" height="30" rx="2" className={styles.table} />
-                    <text x="443" y="567" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">N</text>
                 </g>
 
                 {/* Tables right side */}
                 <g className={styles.table}>
-                    <rect x="578" y="400" width="70" height="30" rx="2" className={styles.table} />
-                    <text x="611" y="422" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">N</text>
+                    <rect x="578" y="350" width="70" height="30" rx="2" className={styles.table} />
                 </g>
                 <g className={styles.table}>
-                    <rect x="648" y="400" width="70" height="30" rx="2" className={styles.table} />
-                    <text x="681" y="422" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">N</text>
+                    <rect x="648" y="350" width="70" height="30" rx="2" className={styles.table} />
                 </g>
                 <g className={styles.table}>
-                    <rect x="578" y="480" width="70" height="30" rx="2" className={styles.table} />
-                    <text x="611" y="502" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">N</text>
+                    <rect x="578" y="420" width="70" height="30" rx="2" className={styles.table} />
                 </g>
                 <g className={styles.table}>
-                    <rect x="648" y="480" width="70" height="30" rx="2" className={styles.table} />
-                    <text x="681" y="502" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">G</text>
+                    <rect x="648" y="420" width="70" height="30" rx="2" className={styles.table} />
+                </g>
+                <g className={styles.table}>
+                    <rect x="578" y="490" width="70" height="30" rx="2" className={styles.table} />
+                </g>
+                <g className={styles.table}>
+                    <rect x="648" y="490" width="70" height="30" rx="2" className={styles.table} />
                 </g>
                 <g className={styles.table}>
                     <rect x="578" y="552" width="70" height="30" rx="2" className={styles.table} />
-                    <text x="611" y="574" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">N</text>
                 </g>
                 <g className={styles.table}>
                     <rect x="648" y="552" width="70" height="30" rx="2" className={styles.table} />
-                    <text x="681" y="574" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">G</text>
                 </g>
 
                 {/* Tables near catwalk */}
                 <g className={styles.table}>
-                    <rect x="550" y="258" width="30" height="70" rx="2" className={styles.table} />
-                    <text x="558" y="291" textAnchor="middle" strokeWidth="1" transform="rotate(90, 558, 291)" fill="white" stroke="white" fontSize="23px">N</text>
+                    <rect x="475" y="258" width="30" height="55" rx="2" className={styles.table} />
+                    <text x="490" y="295" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">T</text>
                 </g>
                 <g className={styles.table}>
-                    <rect x="475" y="258" width="30" height="70" rx="2" className={styles.table} />
-                    <text x="483" y="291" textAnchor="middle" strokeWidth="1" transform="rotate(90, 483, 291)" fill="white" stroke="white" fontSize="23px">N</text>
-                </g>
-                <g className={styles.table}>
-                    <rect x="400" y="258" width="30" height="70" rx="2" className={styles.table} />
-                    <text x="408" y="291" textAnchor="middle" strokeWidth="1" transform="rotate(90, 408, 291)" fill="white" stroke="white" fontSize="23px">N</text>
+                    <rect x="400" y="258" width="30" height="55" rx="2" className={styles.table} />
+                    <text x="415" y="295" textAnchor="middle" strokeWidth="1" fill="white" stroke="white" fontSize="23px">T</text>
                 </g>
             </g>
 
             {/* Sofas */}
             <g className={styles.sofa} fill="#d99">
-                <rect x="684" y="290" width="34" height="70" rx="5" />
-                <text x="702" y="330" textAnchor="middle" strokeWidth="1" fill="black" fontSize="20px">S</text>
+                <rect x="410" y="555" width="70" height="34" rx="5" />
+                <text x="443" y="577" textAnchor="middle" strokeWidth="1" fill="black" fontSize="20px">Soffa</text>
             </g>
             <g className={styles.sofa} fill="#d99">
                 <rect x="410.5" y="605.5" width="70" height="34" rx="5" />
-                <text x="445" y="630" textAnchor="middle" strokeWidth="1" fill="black" fontSize="20px">S</text>
+                <text x="445" y="630" textAnchor="middle" strokeWidth="1" fill="black" fontSize="20px">Soffa</text>
             </g>
 
             {/* Table explainations */}
             <g textAnchor="start" strokeWidth="1" fill="black" stroke="black" fontSize="23px">
-                <text x="120" y="600">N = Nya bord</text>
-                <text x="120" y="630">G = Gamla bord</text>
-                <text x="120" y="660">S = Soffa</text>
+                <text x="60" y="600">T = Mindre bord av trä.</text>
+                <text x="60" y="640">Stora träbord placeras</text>
+                <text x="60" y="670">intill höger vägg. Resten</text>
+                <text x="60" y="700">är plastbord.</text>
             </g>
         </svg>
     );
