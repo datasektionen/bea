@@ -13,10 +13,10 @@ const laskkylData: LaskkylData = {
                 name: 'Läsk',
                 price: 8,
             },
-            {
-                name: 'Festis',
-                price: 6,
-            },
+            //{
+            //    name: 'Festis',
+            //    price: 6,
+            //},
             /* {
                 name: 'Bubbelvatten',
                 price: 8,
@@ -39,32 +39,12 @@ const laskkylData: LaskkylData = {
             //    name: 'Pingvinstång',
             //    price: 5,
             //},
-            {
-                name: 'Müslibar',
-                price: 4,
-            },
             //{
-            //    name: 'Wasa Sandwich',
-            //    price: 12,
+            //    name: 'Müslibar',
+            //    price: 4,
             //},
             {
-                name: 'Godispåse',
-                price: 13,
-            },
-            {
-                name: 'KEX-choklad',
-                price: 9,
-            },
-            {
-                name: 'Kinder',
-                price: 3,
-            },
-            {
-                name: 'Godissnöre',
-                price: 10,
-            },
-            {
-                name: 'Chokladbar',
+                name: 'Pingvinstång',
                 price: 5,
             },
         ],
