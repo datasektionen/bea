@@ -138,8 +138,8 @@ export const internFunkisar: Record<Role, Person[]> = {
         },
         {
             name: 'Liam Thorell',
-            email: 'liamt@kth.se',
-            emailType: 'custom',
+            email: 'liamt',
+            emailType: 'data',
         },
     ],
     mopp: [
