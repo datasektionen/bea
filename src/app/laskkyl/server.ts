@@ -25,20 +25,20 @@ const laskkylData: LaskkylData = {
                 name: 'Kong Strong',
                 price: 8,
             },
-            {
-                name: 'Hell!!',
-                price: 5,
-            },
+            // {
+            //     name: 'Hell!!',
+            //     price: 5,
+            // },
             {
                 name: 'ISH Spirits',
                 price: 5,
             },
         ],
         snacks: [
-            {
-                name: 'Risifrutti',
-                price: 13,
-            },
+            // {
+            //     name: 'Risifrutti',
+            //     price: 13,
+            // },
             //{
             //    name: 'Pingvinstång',
             //    price: 5,
@@ -47,10 +47,10 @@ const laskkylData: LaskkylData = {
             //    name: 'Müslibar',
             //    price: 4,
             //},
-            {
-                name: 'Pingvinstång',
-                price: 5,
-            },
+            // {
+            //     name: 'Pingvinstång',
+            //     price: 5,
+            // },
         ],
         other: [],
     },
