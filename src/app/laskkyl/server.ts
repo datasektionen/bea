@@ -13,10 +13,10 @@ const laskkylData: LaskkylData = {
                 name: 'Läsk',
                 price: 8,
             },
-            //{
-            //    name: 'Festis',
-            //    price: 6,
-            //},
+            {
+                name: 'Fruktdryck',
+                price: 5,
+            },
             /* {
                 name: 'Bubbelvatten',
                 price: 8,
