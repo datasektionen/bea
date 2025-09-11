@@ -31,7 +31,7 @@ const laskkylData: LaskkylData = {
             // },
             {
                 name: 'ISH Spirits',
-                price: 5,
+                price: 3,
             },
         ],
         snacks: [
@@ -45,7 +45,7 @@ const laskkylData: LaskkylData = {
             // },
             {
                 name: 'Pingvinstång',
-                price: 5,
+                price: 6 eller 7,
             },
             {
                 name: 'Müslibar',
