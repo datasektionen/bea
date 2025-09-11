@@ -45,7 +45,7 @@ const laskkylData: LaskkylData = {
             // },
             {
                 name: 'Pingvinstång',
-                price: 6 eller 7,
+                price: '6 eller 7',
             },
             {
                 name: 'Müslibar',
