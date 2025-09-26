@@ -42,7 +42,7 @@ const laskkylData: LaskkylData = {
             {
                 name: 'Wasa Knäcke',
                 price: 10,
-            /,
+            },
             // {
             //     name: 'Risifrutti',
             //     price: 13,
@@ -54,23 +54,23 @@ const laskkylData: LaskkylData = {
             {
                 name: 'Corny Big',
                 price: 10,
-            /,
-                {
+            },
+            {
                 name: 'Twix',
                 price: 8,
-            /,
+            },
             {
                 name: 'Mars',
                 price: 8,
-            /,
+            },
             {
                 name: 'Zoo-ask',
                 price: 6,
-            /,
+            },
             {
                 name: 'KEX choklad',
                 price: 3,
-            /,
+            },
             /*{
                 name: 'Müslibar',
                 price: 4,
