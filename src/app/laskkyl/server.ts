@@ -21,21 +21,21 @@ const laskkylData: LaskkylData = {
                 name: 'Fruktdryck',
                 price: 5,
             },*/
-            /* {
-                name: 'Bubbelvatten',
+            {
+                name: 'Julmust',
                 price: 8,
-            }, */
-            /*{
-                name: 'Kong Strong',
-                price: 8,
-            },*/
+            }, 
+            {
+                name: 'KONG XXL',
+                price: 10,
+            },
             // {
             //     name: 'Hell!!',
             //     price: 5,
             // },
             {
                 name: 'ISH Spirits',
-                price: 1,
+                price: 2,
             },
         ],
         snacks: [
@@ -52,8 +52,16 @@ const laskkylData: LaskkylData = {
                 price: 6,
             },
             {
-                name: 'Zoo-ask',
-                price: 6,
+                name: 'Twix',
+                price: 8,
+            },
+            {
+                name: 'Mars',
+                price: 8,
+            },
+            {
+                name: 'Lion',
+                price: 8,
             },
             {
                 name: 'KEX choklad',
