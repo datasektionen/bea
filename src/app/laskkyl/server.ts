@@ -14,7 +14,7 @@ const laskkylData: LaskkylData = {
                 price: 8,
             },
             {
-                name: 'Energidryck, 250 ml',
+                name: 'Energi 250 ml',
                 price: 7,
             },
             /*{
