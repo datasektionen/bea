@@ -10,7 +10,7 @@ const laskkylData: LaskkylData = {
     products: {
         drinks: [
             {
-                name: 'Läsk (i läskkylen? Crazy!)',
+                name: 'Läsk (Crazy!)',
                 price: 8,
             },
             {
@@ -22,7 +22,7 @@ const laskkylData: LaskkylData = {
                 price: 5,
             },*/
             {
-                name: 'BIG KONG (500 ml)',
+                name: 'BIG KONG',
                 price: 10,
             },
             {
