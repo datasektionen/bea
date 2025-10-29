@@ -46,7 +46,7 @@ const laskkylData: LaskkylData = {
             /*{
                 name: 'Pingvinstång',
                 price: 6,
-            },
+            },*/
             {
                 name: 'Kit-Kat',
                 price: 8,
@@ -66,7 +66,7 @@ const laskkylData: LaskkylData = {
             {
                 name: 'Corny BIG',
                 price: 8,
-            },*/
+            },
         ],
         other: [
             {
