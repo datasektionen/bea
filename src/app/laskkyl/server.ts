@@ -55,15 +55,11 @@ const laskkylData: LaskkylData = {
                 name: 'Marsbar',
                 price: 8,
             },
-            {
+            /*{
                 name: 'Lionbar',
                 price: 8,
             },
-            //{
-            //    name: 'KEX choklad',
-            //    price: 3,
-            //},
-            /*{
+            {
                 name: 'Corny BIG',
                 price: 8,
             },*/
