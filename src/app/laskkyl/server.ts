@@ -29,18 +29,18 @@ const laskkylData: LaskkylData = {
                 name: 'CaPri-Sun ☀️',
                 price: 6,
             },
-            {
+            /*{
                 name: 'Fejkis 😎',
                 price: 5,
-            },
+            },*/
             // {
             //     name: 'Hell!!',
             //     price: 5,
             // },
-            {
-                name: 'ISH Spirits 🌲',
-                price: 2,
-            },
+            //{
+            //    name: 'ISH Spirits 🌲',
+            //    price: 2,
+            //},
         ],
         snacks: [
             {
@@ -59,10 +59,10 @@ const laskkylData: LaskkylData = {
                 name: 'Kit-Kat 😻',
                 price: 8,
             },
-            {
+            /*{
                 name: 'Twix 🤯',
                 price: 8,
-            },
+            },*/
             {
                 name: 'Kexchoklad 🙃',
                 price: 4,
@@ -76,10 +76,6 @@ const laskkylData: LaskkylData = {
             {
                 name: 'Chips 🔫',
                 price: 8,
-            },
-            {
-                name: 'Nu ingår en ISH vid varje köp! 💙',
-                price: 0
             },
         ],
     },
