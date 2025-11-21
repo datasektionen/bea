@@ -11,11 +11,11 @@ const laskkylData: LaskkylData = {
         drinks: [
             {
                 name: 'Coca-Cola ❤️',
-                price: 7,
+                price: 8,
             },
             {
                 name: 'Energi ⚡️ 250 ml',
-                price: 7,
+                price: 8,
             },
             {
                 name: 'Julmust 🧑‍🎄',
@@ -47,7 +47,7 @@ const laskkylData: LaskkylData = {
                 name: 'Pingvinstång 🐧',
                 price: 6,
             },
-            {
+            /*{
                 name: 'Marsbar 👍',
                 price: 8,
             },
@@ -59,7 +59,7 @@ const laskkylData: LaskkylData = {
                 name: 'Kit-Kat 😻',
                 price: 8,
             },
-            /*{
+            {
                 name: 'Twix 🤯',
                 price: 8,
             },*/
