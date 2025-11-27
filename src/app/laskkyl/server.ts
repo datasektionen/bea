@@ -24,12 +24,12 @@ const laskkylData: LaskkylData = {
             /*{
                 name: 'BIG KONG',
                 price: 10,
-            },*/
+            },
             {
                 name: 'CaPri-Sun ☀️',
                 price: 6,
             },
-            /*{
+            {
                 name: 'Fejkis 😎',
                 price: 5,
             },*/
@@ -62,21 +62,16 @@ const laskkylData: LaskkylData = {
             {
                 name: 'Twix 🤯',
                 price: 8,
-            },*/
+            },
             {
                 name: 'Kexchoklad 🙃',
                 price: 4,
             },
-            /*{
+            {
                 name: 'Corny BIG',
                 price: 8,
             },*/
         ],
-        other: [
-            {
-                name: 'Chips 🔫',
-                price: 8,
-            },
-        ],
+        other: [],
     },
 };
