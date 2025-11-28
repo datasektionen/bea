@@ -10,7 +10,7 @@ const laskkylData: LaskkylData = {
     products: {
         drinks: [
             {
-                name: 'Coca-Cola ❤️',
+                name: 'Burkläsk ❤️',
                 price: 8,
             },
             {
@@ -24,15 +24,15 @@ const laskkylData: LaskkylData = {
             /*{
                 name: 'BIG KONG',
                 price: 10,
-            },
+            },*/
             {
-                name: 'CaPri-Sun ☀️',
+                name: 'Capri-Sun ☀️',
                 price: 6,
             },
             {
                 name: 'Fejkis 😎',
-                price: 5,
-            },*/
+                price: 6,
+            },
             // {
             //     name: 'Hell!!',
             //     price: 5,
@@ -47,8 +47,8 @@ const laskkylData: LaskkylData = {
                 name: 'Pingvinstång 🐧',
                 price: 6,
             },
-            /*{
-                name: 'Marsbar 👍',
+            {
+                name: 'Japp 👍',
                 price: 8,
             },
             {
@@ -59,7 +59,7 @@ const laskkylData: LaskkylData = {
                 name: 'Kit-Kat 😻',
                 price: 8,
             },
-            {
+            /*{
                 name: 'Twix 🤯',
                 price: 8,
             },
