@@ -1,6 +1,6 @@
 "use client";
 
-import {
+import React, {
     createRef,
     Ref,
     useEffect,
@@ -16,7 +16,7 @@ export interface ClickPopupRef {
 
 export interface ClickPopupProps {
     ref: Ref<ClickPopupRef>;
-    children: JSX.Element;
+    children: React.ReactElement;
 }
 
 export function ClickPopup({ ref, children }: ClickPopupProps) {
@@ -39,7 +39,7 @@ export function ClickPopup({ ref, children }: ClickPopupProps) {
         const viewport = document.documentElement;
         const box = anchor.getBoundingClientRect();
         let x = box.left + viewport.scrollLeft + box.width;
-        let y = box.top + viewport.scrollTop;
+        const y = box.top + viewport.scrollTop;
         let maxWidth = null; // null = auto
         if (containerRef.current) {
             const popup = containerRef.current.getBoundingClientRect();
