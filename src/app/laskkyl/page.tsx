@@ -11,7 +11,7 @@ import { useRouter } from 'next/navigation';
 export default function Laskkyl() {
     const [laskkylData, setLaskkylData] = useState<LaskkylData | undefined>();
     const minstaKopRef = React.useRef<HTMLHeadingElement>(null);
-    const dataTimerRef = React.useRef<NodeJS.Timeout>();
+    const dataTimerRef = React.useRef<NodeJS.Timeout>(null);
     // const router = useRouter();
 
     function toggleFullscreen() {
