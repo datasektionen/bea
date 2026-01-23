@@ -17,10 +17,6 @@ const laskkylData: LaskkylData = {
                 name: 'Energi ⚡️ 250 ml',
                 price: 8,
             },
-            {
-                name: 'Julmust 🧑‍🎄',
-                price: 7,
-            },
             /*{
                 name: 'BIG KONG',
                 price: 10,
@@ -63,7 +59,11 @@ const laskkylData: LaskkylData = {
                 name: 'Kit-Kat 😻',
                 price: 8,
             },
-            /*{
+            {
+                name: 'Flapjack 🥞',
+                price: 8,
+            },
+            {
                 name: 'Twix 🤯',
                 price: 8,
             },
@@ -71,7 +71,7 @@ const laskkylData: LaskkylData = {
                 name: 'Kexchoklad 🙃',
                 price: 4,
             },
-            {
+            /*{
                 name: 'Corny BIG',
                 price: 8,
             },*/
