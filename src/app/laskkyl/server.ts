@@ -10,19 +10,15 @@ const laskkylData: LaskkylData = {
     products: {
         drinks: [
             {
-                name: 'BOOM! Energy ⚡️',
+                name: 'BOOM Energy⚡️',
                 price: 8,
             },
             {
-                name: 'KONG Sour Worms 🪱',
+                name: 'KONG Worms 🪱',
                 price: 10,
             },
             {
-                name: 'Coca Cola',
-                price: 8,
-            },
-            {
-                name: 'Coca Cola',
+                name: 'Coca Cola ❄️',
                 price: 8,
             },
             {
